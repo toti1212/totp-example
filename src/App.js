@@ -1,23 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import QRCode from "qrcode.react";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <code>
+            Example of TOTP{" "}
+            <span role="img" aria-label="fire">
+              🔥
+            </span>
+          </code>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <QRCode
+            className="App-logo"
+            renderAs="svg"
+            size={512}
+            level="H"
+            includeMargin={true}
+            value="test"
+          />
+        </div>
       </header>
     </div>
   );
